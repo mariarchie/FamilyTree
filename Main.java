@@ -16,7 +16,6 @@ public class Main {
         ivan.display();
         gosha.display();
         pir.display();
-
         Collections.sort(list);
         System.out.println("Family members in alphabetic order:\n" + list);
 
