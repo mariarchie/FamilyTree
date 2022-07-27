@@ -5,9 +5,11 @@ public class Main {
     public static void main(String[] args) {
 
         Family m = new Family("John1");
-        m.isBorn("John2", "John1");
-        m.isBorn("Mike", "John1");
-        m.isBorn("Fred", "Mike");
+        m.addChild("John2", "John1");
+        m.addChild("Mike", "John1");
+        m.addChild("Fred", "Mike");
+        m.addChild("Krec", "Fred");
+        m.addChild("Adam", "Krec");
         List<String> list = m.getallChildren();
         System.out.println(list.toString());
         Brother ivan = new Brother("John2", "Ivan");

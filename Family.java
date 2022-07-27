@@ -10,7 +10,7 @@ public class Family {
 		personMap.put(Daddy, new Person(Daddy));
 	}
 
-	public void isBorn(String child, String parent) {
+	public void addChild(String child, String parent) {
 		Person parentObj = personMap.get(parent);
 		Person childObj = new Person(child);
 		parentObj.children.add(childObj);
