@@ -1,7 +1,8 @@
 import java.util.*;
 
-class Person {
-	protected String name;
+class Person implements Comparable<Person> {
+	
+    protected String name;
 	protected List<Person> children;
 	protected Boolean isDead;
 
@@ -14,20 +15,14 @@ class Person {
 	public void display() {
 		System.out.println(this.name);
 	}
-}
 
-class Brother extends Person {
+	public int compareTo(Person p){
+     
+        return name.compareTo(p.getName());
+    }
 
-	private String brotherName;
-
-	public Brother(String aName, String brotherName) {
-		super(aName);
-		this.brotherName = brotherName;
+	private String getName() {
+		return name;
 	}
 
-	@Override
-	public void display() {
-		super.display();
-		System.out.println("Brother name: " + this.brotherName);
-	}
 }

@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Family {
-	HashMap<String, Person> personMap;
-	String Daddy;
+	private HashMap<String, Person> personMap;
+	private String Daddy;
 
 	public Family(String father) {
 		personMap = new HashMap<>();
@@ -10,15 +10,11 @@ public class Family {
 		personMap.put(Daddy, new Person(Daddy));
 	}
 
-	public void birth(String child, String parent) {
+	public void isBorn(String child, String parent) {
 		Person parentObj = personMap.get(parent);
 		Person childObj = new Person(child);
 		parentObj.children.add(childObj);
 		personMap.put(child, childObj);
-	}
-
-	public void death(String name) {
-		personMap.get(name).isDead = true;
 	}
 
 	public List<String> getallChildren() {
